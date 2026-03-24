@@ -18,6 +18,7 @@ config(){
     mkdir -p ~/.config/kitty
     cp "$CONFIG_DIR/kitty.conf" ~/.config/kitty/kitty.conf
     cp "$CONFIG_DIR/GruvBox_DarkHard.conf" ~/.config/kitty/GruvBox_DarkHard.conf
+    cp "$CONFIG_DIR/mappings.conf" ~/.config/kitty/mappings.conf
     pretty_text "Success copy"
 }
 
