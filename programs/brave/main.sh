@@ -1,0 +1,2 @@
+sudo apt install -y curl 
+curl -fsS https://dl.brave.com/install.sh | sh
