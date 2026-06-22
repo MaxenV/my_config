@@ -9,7 +9,7 @@ source "$HELPERS_FILE"
 
 installations(){
     step_start "Install kitty requirements"
-    sudo apt install kitty
+    sudo apt install -y kitty
     pretty_text "Success installing"
 }
 
