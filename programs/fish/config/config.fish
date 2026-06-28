@@ -1,6 +1,8 @@
-set -gx PATH /home/maxen/.local/bin $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
 
-oh-my-posh init fish --config ~/.cache/oh-my-posh/themes/custom_quick-term.omp.json | source
+if type -q oh-my-posh
+    oh-my-posh init fish --config "$HOME/.cache/oh-my-posh/themes/custom_quick-term.omp.json" | source
+end
 
 
 if status is-interactive
@@ -9,13 +11,13 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/maxen/miniforge3/bin/conda
-    eval /home/maxen/miniforge3/bin/conda "shell.fish" "hook" $argv | source
+if test -f "$HOME/miniforge3/bin/conda"
+    eval "$HOME/miniforge3/bin/conda" "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/maxen/miniforge3/etc/fish/conf.d/conda.fish"
-        . "/home/maxen/miniforge3/etc/fish/conf.d/conda.fish"
+    if test -f "$HOME/miniforge3/etc/fish/conf.d/conda.fish"
+        . "$HOME/miniforge3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/maxen/miniforge3/bin" $PATH
+        set -x PATH "$HOME/miniforge3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
